@@ -6,20 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/getData"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-       android:layout_centerInParent="true"/>
     <Button
-        android:id="@+id/insert"
+        android:id="@+id/btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Insert Data"
-        android:layout_below="@+id/getData"
-        android:layout_centerHorizontal="true"
+        android:text="Add"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="40dp"
         />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvContacts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btnAdd"
+        tools:listitem="@layout/contact_item_layout"
+        />
+
 
 </RelativeLayout>

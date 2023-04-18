@@ -17,4 +17,5 @@ interface ContactDAO {
 
     @Query("SELECT * FROM contact")
     fun getContact(): LiveData<List<Contact>>
+
 }
