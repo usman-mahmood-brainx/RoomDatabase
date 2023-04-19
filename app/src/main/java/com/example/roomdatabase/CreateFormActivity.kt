@@ -19,7 +19,7 @@ class CreateFormActivity : AppCompatActivity() {
 
         val formType =  intent.getStringExtra("FormType",)
         val id = intent.getIntExtra("id",0)
-        Toast.makeText(this,id.toString(),Toast.LENGTH_SHORT).show()
+        
         if(formType == "Add")
             binding.tvFormLabel.text = "Add Contact"
         else{
@@ -27,6 +27,7 @@ class CreateFormActivity : AppCompatActivity() {
             val name = intent.getStringExtra("name")
             binding.etName.setText(name)
             binding.etPhoneNumber.setText(intent.getStringExtra("phoneNumber"))
+            binding.btnSave.text = "Update"
         }
 
         binding.btnSave.setOnClickListener {

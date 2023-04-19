@@ -10,17 +10,30 @@
         android:id="@+id/btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add"
+        android:text="Add Contact"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:layout_marginRight="40dp"
         />
+    <TextView
+        android:id="@+id/tvContactLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contact List"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:layout_below="@+id/btnAdd"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:layout_marginBottom="20dp"
+        />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvContacts"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/btnAdd"
+        android:layout_below="@+id/tvContactLabel"
         tools:listitem="@layout/contact_item_layout"
         />
 
